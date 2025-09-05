@@ -1,8 +1,9 @@
     function entrar() {
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
-
-        if (emailVar == "@sptech.school" && senhaVar == "grupo8") {
+        let emailVar = email_input.value;
+        let senhaVar = senha_input.value;
+        
+        
+        if (emailVar.includes("@sptech.school") == true && senhaVar.length >= 6) {
             cardErro.className = "card_sucesso";
           mensagem_erro.innerHTML = "Login efetuado com sucesso!";
           document.querySelector(".alerta_erro").style.display = "block";
