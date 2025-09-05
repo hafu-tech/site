@@ -2,6 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+}
+
+
+:root{
+  --amarelo: rgb(211, 180, 43);
+  
 }
 
 header {
@@ -11,9 +18,11 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-bottom: 2px solid black;
   text-align: center;
-  background: rgba(255, 255, 255, 0.1)
+  background: rgba(255, 255, 255, 0.084);
+  font-family: sans-serif;
+  
+  
 }
 
 header a {
@@ -62,24 +71,60 @@ section {
 }
 
 span {
-  color: yellow;
+  color: var(--amarelo);
 }
 
 #content {
   display: flex;
   flex-direction: column;
   text-align: center;
+  
 }
 
 #content #frase1 {
   display: flex;
   justify-content: space-between;
-  width: 150px;
+  width: 320px;  
+    font-size: 35px;
+ 
 }
 
 #content #frase2 {
   display: flex;
   justify-content: space-between;
-  width: 125px;
-  margin-left: 15px;
+  width: 230px;
+  margin-left: 45px;
+      font-size: 30px;
+
+}
+
+.pagina2{
+ display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center ;
+  background-color: blueviolet;
+}
+.imagens{
+  justify-content: space-between;
+  display: flex;
+  height: 250px;
+  margin-top: 2%;
+}
+.textos{
+    justify-content: space-between;
+  display: flex;
+  gap: 30px;
+  margin-left: 1%;
+}
+.titulo1{
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+.titulo1 span{
+  margin-right: 5px;
+}
+.titulo1 p{
+  margin-left: 5px;
 }
