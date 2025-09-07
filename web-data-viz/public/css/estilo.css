@@ -10,16 +10,20 @@
 }
 
 header {
-  position: relative;
-  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
   height: 10vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   font-weight: bold;
   font-size: 20px;
-  background: rgba(255, 255, 255, 0.0);
+  background: transparent;
+  color: white;
 }
 
 header img {
@@ -69,6 +73,7 @@ section:first-of-type {
   background-image: url("/web-data-viz/public/assets/fundo-biblioteca.png");
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 #home {
@@ -150,6 +155,8 @@ span {
 }
 
 .login{
+    display: flex;
+    min-height: 100vh;
     background-image: url("/web-data-viz/public/assets/fundo-biblioteca.png");
     background-size: cover;
     justify-items: center;
@@ -157,8 +164,12 @@ span {
     align-items: center;
 }
 
-.cadastro{
+.cadastro {
+    display: flex;
+    min-height: 100vh;
     background-image: url("/web-data-viz/public/assets/fundo-biblioteca.png");
+    background-repeat: no-repeat;
+  
     background-size: cover;
     justify-items: center;
     justify-content: center;
@@ -215,23 +226,46 @@ span {
 .formulario {
     display: flex;
     flex-direction: column;
-    gap: 10px; 
-    align-items: flex-start;
-    margin-right: 0;
+    gap: 15px; 
+    width: 100%; 
+    margin: 0 auto;
 }
 
 .card-login {
     background-color: #d3b42b; 
     color: white;
     border-radius: 15px;
+    margin-top: 30px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
     
-    width: 60%; 
-    height: 100%;
+    width: 90%; 
+    max-width: 530px;
+    min-height: 380px; 
 
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    padding: 30px; 
+    justify-content: center;
+}
+
+.card-cadastro {
+    background-color: #d3b42b; 
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
+    width: 670px; 
+    max-width: 90%;
+    min-height: 380px;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
 }
 
 .titulo{
@@ -254,7 +288,7 @@ span {
 
 
 .botao {
-    width: 100%;
+    width: 70%;
     padding: 14px;
     margin-top: 20px; 
     border: none;
@@ -269,9 +303,8 @@ span {
     text-align: center;
     justify-content: center;
     justify-items: center;
-    margin-left: 30%;
-    align-self: center;
     margin-left: 0;
+    align-self: center;
 }
 
 .botao:hover{
@@ -284,17 +317,42 @@ span {
   margin-top: 10px;
 }
 
-.card-cadastro {
-    background-color: #d3b42b; 
-    color: white;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
-    
-    width: 60%; 
-    height: 100%;
-
-    display: flex;
+@media screen and (mas-width: 600px){
+  .cadastro{
     flex-direction: column;
-    text-align: center;
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+    
+  }
+
+  .card-cadastro{
+    width: 95%;
+    max-width: 100%;
+    padding: 20px;
+    margin-top: 15px;
+    min-height: auto;
+  }
+
+  .titulo{
+    font-size: 20px;
+
+  }
+
+  .campo input{
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .botao{
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .esqueceu{
+    font-size: 13px;
+    margin-top: 8px;
+  }
 }
 
