@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --amarelo: rgb(211, 180, 43);
+}
+
+header {
+  position: relative;
+  z-index: 10;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.0);
+}
+
+header img {
+  width: 150px;
+  margin-top: 30px;
+}
+
+#pesquisa {
+  display: flex;
+}
+
+header input {
+  height: 35px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+#pesquisa {
+  display: flex;
+  gap: 5px;
+}
+
+#pesquisa button{
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('/web-data-viz/public/assets/noun-lens-5888391.png');
+  background-size: 25px;
+  background-position: 5px 5px; 
+  background-repeat: no-repeat;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+header input:focus{
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+header #login-cadastro {
+  margin-right: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 600px){
+  header {
+    display: block;
+  }
+
+  header input {
+    margin: 10px 0 10px 60px;
+  }
+}
