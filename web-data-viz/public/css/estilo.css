@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;;
 }
 
 :root{
@@ -129,7 +130,7 @@ span {
   margin-left: 1%;
 }
 
-footer {
+.footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -137,6 +138,7 @@ footer {
   background-color: var(--amarelo);
   font-weight: bold;
   color: white;
+  flex-direction: row;
 }
 
 .login .container {
@@ -147,9 +149,17 @@ footer {
     justify-items: center;
 }
 
-
 .login{
     background-image: url("/web-data-viz/public/assets/fundo-biblioteca.png");
+    background-size: cover;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro{
+    background-image: url("/web-data-viz/public/assets/fundo-biblioteca.png");
+    background-size: cover;
     justify-items: center;
     justify-content: center;
     align-items: center;
@@ -191,26 +201,97 @@ footer {
 }
 
 .principal{
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   justify-items: center;
-  padding: 2;
   opacity: 100%;
   z-index: 1000;
+  margin-top: 7%;
+  flex-direction: column;
 }
 
-div.card.card-login{
-background-color: var(--amarelo);
-    border: solid;
-    border-radius: 2.5%;
-    height: 75%;
-    width: 50%;
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-right: 20%;
+}
+
+.card-login {
+    background-color: #d3b42b; 
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
+    
+    width: 60%; 
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titulo{
+  font:bolder;
+  font-size: 25px;
+}
+
+.campo {
+    text-align: left; 
+}
+
+.campo input {
+    width: 150%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    background-color: #f0f0f0; 
+}
+
+.botao {
+    width: 90%;
+    padding: 14px;
+    margin-top: 20px; 
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* para que o hover seja gradual */
     align-items: center;
+    text-align: center;
+    justify-content: center;
     justify-items: center;
-    padding: 15vh;
-
+    margin-left: 30%;
 }
 
+.botao:hover{
+  background-color: rgb(248, 232, 142);
+}
 
+.esqueceu{
+  width: 100%;
+  height: 100vh;
+
+  text-align: center;
+}
+
+.card-cadastro {
+    background-color: #d3b42b; 
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
+    
+    width: 60%; 
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
