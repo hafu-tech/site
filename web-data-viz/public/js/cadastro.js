@@ -1,0 +1,61 @@
+function cadastrar() {
+    var nomeVar = nome_input.value;
+    
+    var emailVar = email_input.value.trim();
+    var senhaVar = senha_input.value;
+    var confirmacaoVar = confirmacao_senha_input.value;
+
+    function exibirMensagem(mensagem, tipo) {
+      cardErro.className = tipo === 'sucesso' ? 'card_sucesso' : 'card_erro';
+      cardErro.style.display = "block";
+      mensagem_erro.innerText = mensagem;
+      document.querySelector('.alerta_erro').style.display = 'block';
+    }
+
+
+
+    if (
+      nomeVar.length === 0 ||
+      emailVar.length === 0 ||
+      senhaVar.length === 0 ||
+      confirmacaoVar.length === 0
+    ) {
+      exibirMensagem("Por favor, preencha todos os campos.", "erro");
+      return false;
+    }
+
+    if (!emailVar.includes("@") || !emailVar.includes(".")) {
+      exibirMensagem("O e-mail precisa conter '@' e '.'", "erro");
+      return false;
+    }
+
+    var dominio = emailVar.toLowerCase();
+    if (
+      !dominio.endsWith(".com") &&
+      !dominio.endsWith(".com.br") &&
+      !dominio.endsWith(".edu") &&
+      !dominio.endsWith(".net") &&
+      !dominio.endsWith(".school") 
+    ) {
+      exibirMensagem("O domínio do e-mail parece inválido.", "erro");
+      return false;
+    }
+
+    if (senhaVar.length < 6) {
+      exibirMensagem("A senha deve ter no mínimo 6 caracteres.", "erro");
+      return false;
+    }
+
+    if (senhaVar !== confirmacaoVar) {
+      exibirMensagem("As senhas não coincidem.", "erro");
+      return false;
+    }
+
+  
+          exibirMensagem("Cadastro realizado com sucesso! Redirecionando para o login...", "sucesso");
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, 2000);
+        
+  }
