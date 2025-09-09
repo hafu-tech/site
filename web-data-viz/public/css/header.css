@@ -47,7 +47,7 @@ header input {
 #pesquisa button {
   width: 40px;
   background-color: rgba(0, 0, 0, 0);
-  background-image: url('/web-data-viz/public/assets/noun-lens-5888391.png');
+  background-image: url('../assets/noun-lens-5888391.png');
   background-size: 25px;
   background-position: 5px 5px;
   background-repeat: no-repeat;

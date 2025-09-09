@@ -13,7 +13,7 @@
   display: flex;
   height: 100vh;
   margin-top: -10vh;
-  background-image: url("/web-data-viz/public/assets/fundo-biblioteca.png");
+  background-image: url("../assets/fundo-biblioteca.png");
   background-size: cover;
   justify-items: center;
   justify-content: center;

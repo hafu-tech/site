@@ -22,7 +22,7 @@ section {
 
 section:first-of-type {
   margin-top: -10vh;
-  background-image: url("/web-data-viz/public/assets/fundo-biblioteca.png");
+  background-image: url("../assets/fundo-biblioteca.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -80,12 +80,29 @@ span {
 
 .titulo {
   font-size: 40px;
+  height: 200px;
+  padding-top: 90px;
+  
 }
 
+
 .textos {
-  justify-content: space-between;
-  display: flex;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  height: 650px; 
 }
+
+.textos span:first-child {
+  flex-grow: 1; 
+  text-align: center; 
+  padding: 5px;
+}
+
+#titulo-texto{
+  font-size: 30px;
+}
+
 
 @media screen and (max-width: 600px) {
   header {
@@ -115,6 +132,20 @@ span {
   section:first-of-type {
     background-size: cover;
     background-position: center;
+  }
+
+  .titulo{
+    padding-top: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .textos{
+    font-size: 14px;
+  }
+
+  #titulo-texto{
+    font-size: 18px;
   }
 
   #frases {
