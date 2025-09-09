@@ -44,10 +44,10 @@ span {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 800px;
+  width: 700px;
+  background-color: rgba(0, 0, 0, 0.5);;
   border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 90px;
+  padding: 15px;
 }
 
 #home #frase1 {
@@ -55,7 +55,7 @@ span {
   justify-content: space-between;
   gap: 10px;
   width: fit-content;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bold;
 }
 
@@ -64,33 +64,27 @@ span {
   justify-content: space-between;
   gap: 10px;
   width: fit-content;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bold;
-  margin-bottom: 40px;
 }
 
 .pagina2 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
   background-color: rgb(255, 255, 255);
   color: #000;
-
+  padding-bottom: 10vh;
 }
 
-.imagens {
-  justify-content: space-between;
-  display: flex;
-  height: 250px;
-  margin-top: 2%;
+.titulo {
+  font-size: 40px;
 }
 
 .textos {
   justify-content: space-between;
   display: flex;
-  gap: 30px;
-  margin-left: 1%;
 }
 
 @media screen and (max-width: 600px) {
@@ -145,7 +139,7 @@ span {
   }
 
   footer {
-    font-size: 12px;
+    font-size: 10px;
   }
 
 }
