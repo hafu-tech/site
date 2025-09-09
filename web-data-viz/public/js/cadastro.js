@@ -5,14 +5,9 @@ function cadastrar() {
     var senhaVar = senha_input.value;
     var confirmacaoVar = confirmacao_senha_input.value;
 
-    function exibirMensagem(mensagem, tipo) {
-      cardErro.className = tipo === 'sucesso' ? 'card_sucesso' : 'card_erro';
-      cardErro.style.display = "block";
+    function exibirMensagem(mensagem) {
       mensagem_erro.innerText = mensagem;
-      document.querySelector('.alerta_erro').style.display = 'block';
     }
-
-
 
     if (
       nomeVar.length === 0 ||

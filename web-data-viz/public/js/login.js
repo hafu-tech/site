@@ -1,18 +1,24 @@
-    function entrar() {
-        let emailVar = email_input.value;
-        let senhaVar = senha_input.value;
-        
-        
-        if (emailVar.includes("@sptech.school") == true && senhaVar.length >= 6) {
-            cardErro.className = "card_sucesso";
-          mensagem_erro.innerHTML = "Login efetuado com sucesso!";
-          document.querySelector(".alerta_erro").style.display = "block";
+function exibirMensagem(mensagem) {
+  cardErro.innerText = mensagem;
+}
 
-          setTimeout(function () {
-            window.location = "simulador.html";
-          }, 1000);
-        };
-        }
-
+function entrar() {
   
-    
+  let emailVar = email_input.value;
+  let senhaVar = senha_input.value;
+
+  if (emailVar.includes("@sptech.school") == true && senhaVar.length >= 6) {
+
+    exibirMensagem("Login efetuado com sucesso!");
+
+    setTimeout(function () {
+      window.location = "index.html";
+    }, 1000);
+  }
+  else {
+    exibirMensagem("Verifique os dados e tente novamente.")
+  }
+}
+
+
+

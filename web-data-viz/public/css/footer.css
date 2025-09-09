@@ -2,18 +2,22 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-:root{
-  --amarelo: rgb(211, 180, 43);
+:root {
+  --amarelo: #E9AD32;
 }
 
 footer {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 10vh;
   background-color: var(--amarelo);
+  margin-top: -10vh;
   font-weight: bold;
+  font-size: 13px;
   color: white;
 }
