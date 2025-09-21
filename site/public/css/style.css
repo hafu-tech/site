@@ -21,7 +21,7 @@ section {
 
 section:first-of-type {
   margin-top: -10vh;
-  background-image: url("/web-data-viz/public/assets/fundo-biblioteca.png");
+  background-image: url("../assets/fundo-biblioteca.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
