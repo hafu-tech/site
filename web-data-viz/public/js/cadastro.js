@@ -45,7 +45,18 @@ function cadastrar() {
       exibirMensagem("As senhas não coincidem.", "erro");
       return false;
     }
-
+fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar
+      }),
+    })
   
           exibirMensagem("Cadastro realizado com sucesso! Redirecionando para o login...", "sucesso");
 
