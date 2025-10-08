@@ -4,6 +4,7 @@ function cadastrar() {
     var emailVar = email_input.value.trim();
     var senhaVar = senha_input.value;
     var confirmacaoVar = confirmacao_senha_input.value;
+    var tipoVar = tipo_usuario.value; 
 
     function exibirMensagem(mensagem) {
       mensagem_erro.innerText = mensagem;
@@ -54,7 +55,8 @@ fetch("/usuarios/cadastrar", {
         
         nomeServer: nomeVar,
         emailServer: emailVar,
-        senhaServer: senhaVar
+        senhaServer: senhaVar,
+        tipoServer: tipoVar
       }),
     })
   
