@@ -5,10 +5,6 @@ function cadastrar() {
     var senhaVar = senha_input.value;
     var confirmacaoVar = confirmacao_senha_input.value;
 
-    function exibirMensagem(mensagem) {
-      mensagem_erro.innerText = mensagem;
-    }
-
     if (
       nomeVar.length === 0 ||
       emailVar.length === 0 ||
