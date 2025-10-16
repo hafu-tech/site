@@ -39,23 +39,6 @@ header input {
   font-size: 16px;
 }
 
-#pesquisa {
-  display: flex;
-  gap: 5px;
-}
-
-#pesquisa button {
-  width: 40px;
-  background-color: rgba(0, 0, 0, 0);
-  background-image: url('../assets/noun-lens-5888391.png');
-  background-size: 25px;
-  background-position: 5px 5px;
-  background-repeat: no-repeat;
-  background-color: white;
-  border-radius: 5px;
-  border: 2px solid black;
-  cursor: pointer;
-}
 
 header input:focus {
   border: 2px solid black;

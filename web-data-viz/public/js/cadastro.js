@@ -6,10 +6,6 @@ function cadastrar() {
     var confirmacaoVar = confirmacao_senha_input.value;
     var tipoVar = tipo_usuario.value; 
 
-    function exibirMensagem(mensagem) {
-      mensagem_erro.innerText = mensagem;
-    }
-
     if (
       nomeVar.length === 0 ||
       emailVar.length === 0 ||

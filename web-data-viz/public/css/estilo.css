@@ -79,10 +79,12 @@ span {
 }
 
 .titulo {
-  font-size: 40px;
-  height: 200px;
-  padding-top: 90px;
-  
+  display: flex;
+  font-size: 45px;
+  height: 150px;
+  padding-top: 80px;
+  font-weight: 600;
+  flex-direction: row;
 }
 
 
@@ -99,8 +101,40 @@ span {
   padding: 5px;
 }
 
-#titulo-texto{
-  font-size: 30px;
+#titulo-texto1{
+  font-size: 35px;
+  padding: 50px;
+  text-align: center;
+}
+
+#titulo-texto2{
+  font-size: 35px;
+  padding: 50px;
+  text-align: center;
+}
+
+#titulo-texto3{
+  font-size: 35px;
+  padding: 50px;
+  text-align: center;
+}
+
+#texto1{
+  font-size: 20px;
+  padding: 45px;
+  text-align: center;
+}
+
+#texto2{
+  font-size: 20px;
+  padding: 45px;
+  text-align: center;
+}
+
+#texto3{
+  font-size: 20px;
+  padding: 45px;
+  text-align: center;
 }
 
 
