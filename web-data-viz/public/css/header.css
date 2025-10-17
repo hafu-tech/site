@@ -24,28 +24,18 @@ header {
 
 header img {
   width: 150px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
-#pesquisa {
+header #canto-direito {
   display: flex;
-}
-
-header input {
-  height: 35px;
-  width: 300px;
-  border: 2px solid black;
-  border-radius: 7px;
-  font-size: 16px;
-}
-
-
-header input:focus {
-  border: 2px solid black;
-  border-radius: 7px;
+  align-items: center;
 }
 
 header #login-cadastro {
+  width: 150px;;
+  display: flex;
+  justify-content: space-around;
   margin-right: 20px;
 }
 
@@ -57,6 +47,30 @@ header a {
 header a:visited {
   text-decoration: none;
   color: white;
+}
+
+header .pai {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+header .pai-ativo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+header #div-filha{
+  width: 30px;
+  height: 5px;
+  background-color: black;
 }
 
 @media screen and (max-width: 600px) {

@@ -15,12 +15,37 @@
 
   <header>
     <div><a href="index.html"><img src="assets/logo.png" alt=""></a></div>
-    <div><a href="">Sobre nós</a></div>
-    <div><a href="">Contato</a></div>
-    <div id="login-cadastro"><a href="cadastro.html">Cadastro | </a><a href="login.html">Login</a></div>
+    <div id="canto-direito">
+      <div id="login-cadastro">
+        <a href="cadastro.html">Cadastro</a>
+        <a href="login.html">Login</a>
+      </div>
+      <a class="pai" onclick="mostrarMenu()">
+        <div id="div-filha"></div>
+        <div id="div-filha"></div>
+        <div id="div-filha"></div>
+      </a>
+    </div>
   </header>
 
   <main>
+
+    <div class="menu">
+      <div class="filha-menu">
+        <div class="neta-menu">
+          <a>Sobre</a>
+        </div>
+        <div class="neta-menu">
+          <a>Quem somos</a>
+        </div>
+        <div class="neta-menu">
+          <a>Curiosidades</a>
+        </div>
+        <div class="neta-menu">
+          <a>Dados</a>
+        </div>
+      </div>
+    </div>
 
     <section>
       <div id="home">
@@ -77,3 +102,19 @@
 
 </body>
 </html>
+
+<script>
+  function mostrarMenu(){
+    
+    var divMenu = document.querySelector(".menu")
+    var main = document.querySelector("main")
+    var pai = document.querySelector(".pai")
+    var menuFilha = document.querySelector(".filha-menu")
+    main.appendChild(divMenu)
+
+    requestAnimationFrame(() => {
+      divMenu.classList.toggle("menu-ativo");
+      pai.classList.toggle("pai-ativo")
+      menuFilha.classList.toggle("filha-menu-ativo")});
+  }
+</script>
