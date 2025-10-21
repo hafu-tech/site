@@ -16,24 +16,28 @@ main {
   color: white;
 }
 
-.menu {
+.div-menu-pai {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 999;
   width: 0;
   height: 100vh;
+  color: #000;
   background-color: white;
   transition: width 0.5s ease;
 }
 
-.menu-ativo {
+.div-menu-pai-ativo {
   width: 300px;
+  border-left: 2px solid black;
 }
 
-.menu .filha-menu {
+.div-menu-pai .div-menu-filha {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -41,21 +45,23 @@ main {
   height: 80%;
   width: 0;
   border: 1px solid transparent;
+  overflow: hidden;
   transition: width 1.5s ease, border-color 1.5s;
 }
 
-.menu-ativo .filha-menu-ativo {
+.div-menu-pai-ativo .div-menu-filha-ativo {
   border: 1px solid black;
   width: 80%;
 }
 
+/* 
 .menu .filha-menu .neta-menu {
   height: 25px;
   color: transparent;
   overflow: hidden;
   transition: color 0.3s;
-}
-
+} */
+/* 
 .menu-ativo .filha-menu-ativo .neta-menu {
   color: black;
   transition: color 3s;
@@ -63,7 +69,7 @@ main {
 
 .menu-ativo .filha-menu-ativo .neta-menu a {
   cursor: pointer;
-}
+} */
 
 section {
   height: 100vh;
