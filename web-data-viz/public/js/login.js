@@ -38,7 +38,7 @@ function entrar() {
                   exibirMensagem("Login efetuado com sucesso!");
 
                     setTimeout(function () {
-                        window.location = "dashboard.html";
+                        window.location = "../dashboard/dashboard.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

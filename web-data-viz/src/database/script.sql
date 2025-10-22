@@ -7,3 +7,8 @@ CREATE TABLE usuario (
     email VARCHAR(45),
     senha VARCHAR(45)
 );
+
+ALTER TABLE usuario RENAME COLUMN nome TO nome_completo;
+ALTER TABLE usuario ADD COLUMN tipo_usuario VARCHAR(40);
+
+select * from usuario;
