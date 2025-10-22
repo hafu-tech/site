@@ -1,72 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  
-<head>
 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+  <title>HafuTech</title>
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/estilo.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
   <header>
     <div><a href="index.html"><img src="assets/logo.png" alt=""></a></div>
-    <div><a href="">Sobre nós</a></div>
-    <div id="pesquisa"><input type="text"><button onclick=""></button></div>
-    <div><a href="">Contato</a></div>
-    <div id="login-cadastro">
-      <a href="cadastro.html">Cadastro |</a> <a href="login.html">Login</a>
+    <div id="canto-direito">
+      <div id="login-cadastro">
+        <a href="cadastro.html">Cadastro</a>
+        <a href="login.html">Login</a>
+      </div>
+      <div class="div-hamburger-pai" onclick="mostrarMenu()">
+        <div class="div-hamburger-filha"></div>
+        <div class="div-hamburger-filha"></div>
+        <div class="div-hamburger-filha"></div>
+      </div>
     </div>
   </header>
 
   <main>
 
-    <section>
+    <div class="div-menu-pai">
+      <div class="div-menu-filha">
+        <div class="div-menu-neta">
+          <a>Sobre</a>
+        </div>
+        <div class="div-menu-neta">
+          <a>Quem somos</a>
+        </div>
+        <div class="div-menu-neta">
+          <a>Curiosidades</a>
+        </div>
+        <div class="div-menu-neta">
+          <a>Dados</a>
+        </div>
+      </div>
+    </div>
 
+    <section>
       <div id="home">
         <div id="frases">
           <div id="frase1">
-            <span>NOSSA</span><p>EDUCAÇÃO</p>
+            <span>NOSSA</span>
+            <p>EDUCAÇÃO</p>
           </div>
           <div id="frase2">
             <p>NOSSO</p><span>FUTURO</span>
           </div>
         </div>
       </div>
-
     </section>
 
     <section class="pagina2">
-      <div class="titulo1">
+      <div class="titulo">
         <span>DESENVOLVIMENTO</span>
         <p>SOCIOECONÔMICO</p>
       </div>
-        <div class="imagens">
+
+      <div class="textos">
+        <div>
+          <h3 id="titulo-texto1">Taxa de Analfabetismo e Escolaridade</h3>
+          <span id="texto1">
+            Segundo o IBGE, em 2024, havia aproximadamente 9.1 milhões de pessoas com 15 anos ou mais de idade
+            analfabetas, isso corresponde a 5,3% sendo mais da metade destes presentes na região nordeste. Ainda segundo
+            o Instituto Brasileiro de Geografia e Estatística, em 2024, dos jovens entre 15 e 17 anos, apenas 76,7%
+            frequentavam ou concluíram o ensino médio, a meta, segundo a PNE (Plano Nacional de Educação) era de 85% até
+            aquele ano.
+          </span>
         </div>
-        <div class="textos">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis totam aspernatur veritatis nemo, veniam officiis quidem a neque. Atque nulla, corrupti veritatis quibusdam eos quam explicabo cum accusamus soluta similique.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam iste quisquam ducimus ipsum est hic laborum quas? Soluta nisi unde temporibus, ex beatae minima eaque nam repellat ad recusandae!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate perspiciatis ut voluptas minus unde molestiae aut odit iste. Odit qui minus excepturi dolor quis dolores ratione quaerat facilis blanditiis optio.</p>
+
+        <div>
+          <h3 id="titulo-texto2">Jovens sem Ensino Médio</h3>
+          <span id="texto2">
+            Entre os jovens de 14 a 29 anos do país, 8,7 milhões não haviam completado o ensino médio em 2024, por terem
+            abandonado a escola sem concluir essa etapa ou por nunca a terem frequentado. Desses jovens, 59,1% eram
+            homens e 40,9% eram mulheres, 26,5% eram brancos e 72,5% eram pretos ou pardos. Em 2023, esse contingente
+            era de 9,3 milhões e em 2019, chegava a 11,4 milhões.
+          </span>
         </div>
+
+        <div>
+          <h3 id="titulo-texto3">Motivos do Abandono Escolar</h3>
+          <span id="texto3">
+            O abandono precoce até os 13 anos de idade foi mais elevado no Nordeste (7,8%) e no Norte (6,1%), mas o Sul
+            (5,9%) também apresentou percentuais relevantes. Em 2024, o principal motivo para os jovens de 14 a 29 anos
+            abandonarem a escola ou nunca a terem frequentado foi a necessidade de trabalhar, mencionado por 42,0% dos
+            entrevistados. O segundo motivo mais citado foi não ter interesse em estudar (25,1%).
+          </span>
+        </div>
+
+      </div>
+
     </section>
 
   </main>
 
   <footer>
-
     <div>&copy; 2025 HafuTech</div>
-    <div>Termos de serviço</div>
-    <div>Política de Privacidade</div>
-
+    <div>Todos os direitos reservados</div>
+    <div>Contato</div>
   </footer>
 
 </body>
+
 </html>
+
+<script>
+
+  function mostrarMenu() {
+
+    var divMenuPai = document.querySelector(".div-menu-pai")
+    var divMenuFilha = document.querySelector(".div-menu-filha")
+
+    requestAnimationFrame(() => {
+      divMenuPai.classList.toggle("div-menu-pai-ativo");
+      divMenuFilha.classList.toggle("div-menu-filha-ativo")}
+    );
+
+  }
+
+</script>
