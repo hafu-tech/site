@@ -2,7 +2,7 @@ var database = require("../database/config")
 
 function autenticar(email, senha) {
     var instrucao = `
-        SELECT email, senha FROM Usuario WHERE email = '${email}' AND senha = '${senha}';
+        SELECT nome_completo, email, senha FROM Usuario WHERE email = '${email}' AND senha = '${senha}';
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     console.log("to aqui em") 

@@ -60,6 +60,8 @@ function cadastrar() {
     }),
   })
 
+  var spanCadastro = document.querySelector(".span-cadastro")
+  spanCadastro.classList.toggle("display-none")
   exibirMensagem("Cadastro realizado com sucesso! Redirecionando para o login...", "sucesso");
 
   setTimeout(() => {

@@ -65,6 +65,53 @@ header .div-hamburger-pai .div-hamburger-filha{
   background-color: black;
 }
 
+.div-menu-pai {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  width: 0;
+  height: 100vh;
+  color: #000;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+.div-menu-pai-ativo {
+  width: 300px;
+  border-left: 2px solid black;
+}
+
+.div-menu-pai .div-menu-filha {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 0;
+  border: 1px solid transparent;
+  overflow: hidden;
+  transition: width 1.5s ease, border-color 1.5s;
+}
+
+.div-menu-pai-ativo .div-menu-filha-ativo {
+  border: 1px solid black;
+  width: 80%;
+}
+
+.div-menu-pai-ativo .div-menu-filha-ativo .div-menu-neta a {
+  cursor: pointer;
+}
+
+.div-menu-pai-ativo .div-menu-filha-ativo .div-menu-neta a:visited {
+  cursor: pointer;
+  color: black;
+}
+
 @media screen and (max-width: 600px) {
   header {
     display: block;

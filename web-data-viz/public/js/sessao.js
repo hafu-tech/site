@@ -34,3 +34,15 @@ function finalizarAguardar(texto) {
     }
 }
 
+function mostrarMenu() {
+
+    var divMenuPai = document.querySelector(".div-menu-pai")
+    var divMenuFilha = document.querySelector(".div-menu-filha")
+
+    requestAnimationFrame(() => {
+      divMenuPai.classList.toggle("div-menu-pai-ativo");
+      divMenuFilha.classList.toggle("div-menu-filha-ativo")}
+    );
+
+  }
+

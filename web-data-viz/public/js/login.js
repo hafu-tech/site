@@ -33,7 +33,7 @@ function entrar() {
                     console.log(json);
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.NOME_USUARIO = json.nome_completo;
                     sessionStorage.ID_USUARIO = json.id;
                   exibirMensagem("Login efetuado com sucesso!");
 
