@@ -8,6 +8,11 @@ body {
   font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.janela .header-left img {
+  width: 150px;
+  height: 150px;
+}
+
 .label-captura {
   display: flex;
   justify-content: center;
@@ -127,6 +132,10 @@ body {
   margin-left: 15vw;
   width: 85%;
 
+}
+
+.header-left div {
+  font-size: 10px;
 }
 
 .header-left a {
