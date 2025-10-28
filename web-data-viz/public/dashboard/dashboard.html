@@ -32,8 +32,6 @@
 
 <body>
 
-    <div class="janela">
-
         <div class="header-left">
 
             <img src="../assets/logo.png" alt="LOGO">
@@ -74,7 +72,7 @@
         <div class="dash">
 
             <div class="parte-cima">
-                <div class="nome-pagina"><span></span></div>
+                <div class="nome-pagina"><span>COLOCAR ALGUMA COISA</span></div>
                 <div class="regiao">
                     <label for="selectRegiao">Região:</label>
                     <select id="selectRegiao">
@@ -109,9 +107,10 @@
 
         </div>
 
-    </div>
-
     <script>
+
+        b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
         var options = {
             series: [
                 {
@@ -195,8 +194,8 @@
 
 </html>
 
-<script>
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+<!-- <script>
+   
 
     let proximaAtualizacao;
 
@@ -431,4 +430,4 @@
             });
 
     }
-</script>
+</script> -->
