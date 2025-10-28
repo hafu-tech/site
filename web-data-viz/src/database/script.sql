@@ -1,18 +1,3 @@
-CREATE DATABASE teste;
-USE teste;
-
-CREATE TABLE usuario (
-	id INT PRIMARY key AUTO_INCREMENT,
-    nome VARCHAR(45),
-    email VARCHAR(45),
-    senha VARCHAR(45)
-);
-
-ALTER TABLE usuario RENAME COLUMN nome TO nome_completo;
-ALTER TABLE usuario ADD COLUMN tipo_usuario VARCHAR(40);
-
-select * from usuario;
-
 CREATE DATABASE hafutech;
 use hafutech;
 
@@ -48,8 +33,6 @@ references Aluno(id_aluno)
 );
 
 
-
-
 create table Usuario(
 id_usuario int primary key auto_increment,
 email VARCHAR(45) not null,
@@ -62,20 +45,37 @@ foreign key (fk_regiao_usuario)
 references Regiao(id_regiao)
 );
 
-create table Comentario(
-id_comentario int auto_increment,
-titulo varchar(45),
-descricao varchar(250),
-fk_usuario int,
-constraint pkComposta primary key (id_filtro, fk_usuario_filtro),
-foreign key (fk_usuario)
-references Usuario(id_usuario)
+CREATE TABLE Comentario(
+id_comentario INT PRIMARY KEY AUTO_INCREMENT,
+titulo VARCHAR(45),
+descricao VARCHAR(250),
+fk_usuario INT NOT NULL,
+CONSTRAINT fk_usuario_comentario
+FOREIGN KEY (fk_usuario)
+REFERENCES Usuario(id_usuario)
 );
 
-create table Log_historico_usuario(
-id_log_historico int auto_increment,
-fk_usuario_log int,
-constraint pkComposta2 primary key(id_log_historico,fk_usuario_log),
-data_hora DATETIME default current_timestamp,
-descricao VARCHAR(100)
+CREATE TABLE Log_historico_usuario(
+id_log_historico INT PRIMARY KEY AUTO_INCREMENT,
+fk_usuario_log INT NULL,
+data_hora DATETIME DEFAULT CURRENT_TIMESTAMP,
+descricao VARCHAR(100),
+CONSTRAINT fk_usuario_log
+FOREIGN KEY (fk_usuario_log)
+REFERENCES Usuario(id_usuario)
 );
+
+CREATE TABLE Escola (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ano INT NOT NULL,
+    id_municipio INT NOT NULL,
+    id_escola INT NOT NULL,
+    area VARCHAR(100),
+    localizacao VARCHAR(100),
+    rede VARCHAR(100),
+    inse_qtd_alunos INT,
+    valor_inse DOUBLE,
+    inse_classificacao2014 VARCHAR(50),
+	inse_classificaca02015 VARCHAR(50)
+);
+            
