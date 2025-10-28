@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,73 +19,130 @@
     <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
     <div class="header-left">
 
-            <img src="../assets/logo.png" alt="LOGO">
+        <img src="../assets/logo.png" alt="LOGO">
 
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario"></span>!</h3>
-            </div>
-
-            <div class="btn-nav">
-                <a href="edicao.html">
-                    <h3>Perfil</h3>
-                </a>
-            </div>
-
-           
-            <div class="btn-nav-white">
-                <a href="dashboard.html">
-                    <h3>Gráficos</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de comentários</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./edicao-comentario.html">
-                    <h3>Edição de comentários</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
+        <div class="hello">
+            <h3>Olá, <span id="b_usuario"></span>!</h3>
         </div>
-        <div class="dash-right">
-            <div class="card-edicao">
+
+        <div class="btn-nav">
+            <a href="edicao.html">
+                <h3>Perfil</h3>
+            </a>
+        </div>
+
+
+        <div class="btn-nav-white">
+            <a href="dashboard.html">
+                <h3>Gráficos</h3>
+            </a>
+        </div>
+
+        <div class="btn-nav-white">
+            <a href="./mural.html">
+                <h3>Mural de comentários</h3>
+            </a>
+        </div>
+
+        <div class="btn-nav-white">
+            <a href="./edicao-comentario.html">
+                <h3>Edição de comentários</h3>
+            </a>
+        </div>
+
+        <div class="btn-logout" onclick="limparSessao()">
+            <h3>Sair</h3>
+        </div>
+
+    </div>
+    <div class="dash-right">
+        <div class="card-edicao">
+            <div class="config">
                 <h2>Configurações de usuário</h2>
-                <div class="divisoria"></div>
-                <div>
+                <div class="div-senha">
                     <h3>Alterar a senha</h3>
-                    <div class="input-1 input">
-                        <p>Nova senha:</p>
-                        <input type="text" id="" placeholder="Digite sua nova senha">
-                    </div>
-                    <div class="input">
-                        <p>Confirme a nova senha:</p>
-                        <input type="text" id="" placeholder="Digite sua nova senha">
-                        <button>Alterar senha</button>
-                    </div>
+                    <p>Nova senha:</p>
+                    <input type="text" id="input_nova_senha" placeholder="Digite sua nova senha">
+                    <p>Confirme a nova senha:</p>
+                    <input type="text" id="input_confirmar_senha" placeholder="Confirme sua nova senha">
+                    <button onclick="editarSenha()">Alterar senha</button>
+                </div>
+                <div class="div-excluir">
                     <h3>Exclusão de conta</h3>
-                    <div class="input input-3">
-                        <p>Excluir conta:</p>
-                        <input type="text" id="" placeholder="Digite seu e-mail">
-                        <button>Confirmar</button>
-                    </div>
+                    <p>Excluir conta:</p>
+                    <input type="text" id="input_email" placeholder="Digite seu e-mail">
+                    <button onclick="excluirConta()">Confirmar</button>
                 </div>
             </div>
         </div>
 </body>
 
 <script>
-     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    function editarSenha() {
+
+        let ipt_senha = input_nova_senha.value
+        let ipt_confirmar = input_confirmar_senha.value
+
+        if (ipt_confirmar != ipt_confirmar) {
+            alert("As senhas não coincidem")
+        }
+        else{
+            fetch(`/usuarios/editar/${sessionStorage.getItem("ID_USUARIO")}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    idUsuario: sessionStorage.ID_USUARIO,
+                    novaSenha: input_nova_senha.value
+                })
+            }).then(function (resposta) {
+            
+                if (resposta.ok) {
+                    window.alert("Senha atualizada com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
+                    window.location = "/dashboard/edicao.html"
+                } else if (resposta.status == 404) {
+                    window.alert("Deu 404!");
+                } else {
+                    throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+        }
+    }
+
+    function excluirConta(idUsuario) {
+
+        idUsuario = sessionStorage.ID_USUARIO
+        console.log("Criar função de apagar usuário escolhido - ID" + idUsuario);
+        fetch(`/usuarios/deletar/${idUsuario}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                window.alert("Usuário deletado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
+                window.location = "../index.html"
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
 </script>
 
 </html>
