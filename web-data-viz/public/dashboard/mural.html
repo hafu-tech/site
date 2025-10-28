@@ -10,7 +10,6 @@
 
     <link rel="stylesheet" href="./../css/dashboards.css">
     <link rel="stylesheet" href="./../css/estilo.css" />
-    <script src="./../js/alerta.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -18,7 +17,7 @@
         rel="stylesheet">
 </head>
 
-<!-- <body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;" -->
+<body onload="atualizarFeed()" style="background-color: #161618;">
 
     <div class="janela">
 
@@ -121,7 +120,7 @@
         }
 
         fetch(`/comentario/publicar/${idUsuario}`, {
-            method: "post",
+            method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -132,9 +131,9 @@
 
             if (resposta.ok) {
                 window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
-                window.location = "/dashboard/mural.html";
+                window.location = "./mural.html";
                 limparFormulario();
-                finalizarAguardar();
+                
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
@@ -142,7 +141,7 @@
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
+            
         });
 
         return false;
@@ -211,7 +210,7 @@
 
                         spanID.innerHTML = "ID: <b>" + publicacao.idComentario + "</b>";
                         spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
-                        spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
+                        spanNome.innerHTML = "Autor: <b>" + publicacao.usuario + "</b>";
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
                         btnEditar.innerHTML = "Editar";
                         btnDeletar.innerHTML = "Deletar";
@@ -241,15 +240,12 @@
                         divButtons.appendChild(btnDeletar);
                         feed.appendChild(divPublicacao);
                     }
-
-                    finalizarAguardar();
                 });
             } else {
                 throw ('Houve um erro na API!');
             }
         }).catch(function (resposta) {
             console.error(resposta);
-            finalizarAguardar();
         });
     }
 
