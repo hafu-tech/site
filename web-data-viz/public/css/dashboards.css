@@ -20,6 +20,7 @@ img {
   justify-content: center;
 }
 
+
 .dash-right .avisos {
   width: 100vw;
   color: rgb(216, 216, 216);
@@ -51,7 +52,7 @@ img {
 
 .dash-right .avisos .div-form textarea {
   width: 95%;
-  border: 3px solid #e6005a;
+  border: 3px solid #e6d300;
   background-color: white;
   border-radius: 5px;
 }
@@ -64,9 +65,17 @@ img {
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: white;
-  background-color: #e6005a;
+  color: 0f0f0f;
+  font-weight: bolder;
+  background-color: rgb(250, 250, 250);
   width: 120px;
+  border: #0f0f0f 2px solid;
+  transition: 0.5s;
+}
+
+.dash-right .avisos .div-form button:hover{
+background-color: #e6d300;
+color: #f0f0f0;
 }
 
 .publicacao-btn-editar {
@@ -192,10 +201,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6%;
+  padding: 2% 5%;
   cursor: pointer;
 }
-
 
 .btn-nav-white {
   width: 50%;
@@ -204,6 +212,11 @@ img {
   border-radius: 8px;
   text-align: center;
   padding: 2% 5%;
+  transition: 0.5s;
+}
+.btn-nav-white:hover{
+  background-color: #e6d300;
+  color: #f3f3f3;
 }
 
 .btn-nav-white h3 {
@@ -229,6 +242,12 @@ img {
   margin-bottom: 10px;
   cursor: pointer;
   border: black solid 2px;
+  transition: 0.5s;
+}
+
+.btn-logout:hover{
+  background-color: rgb(208, 20, 20);
+  color: #f1f1f1;
 }
 
 .graficos {
@@ -366,6 +385,7 @@ img {
   margin-left: 15%;
   border: 1px solid black;
   border-radius: 8px;
+
 }
 
 .card-edicao::after {
@@ -398,4 +418,28 @@ img {
   flex-direction: column;
   justify-content: space-evenly;
   height: 40%;
+}
+
+.card-edicao  button{
+  cursor: pointer;
+  border-radius: 10px;
+  height: 25px;
+  transition: 0.5s;
+  font-weight: bolder;
+}
+.card-edicao button:hover{
+background-color: #e6d300;
+color: #f0f0f0;
+}
+
+
+.card-edicao input{
+  border-radius: 10px;
+  height: 30px;
+  width: 350px;
+}
+
+
+.botaoMural{
+  width: 10vw;
 }
