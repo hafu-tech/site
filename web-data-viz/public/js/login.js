@@ -14,7 +14,7 @@ function entrar() {
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
 
-        fetch("/usuarios/autenticar", {
+        fetch("http://localhost:3300/usuarios/autenticar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

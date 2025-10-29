@@ -46,7 +46,7 @@ function cadastrar() {
     exibirMensagem("As senhas não coincidem.", "erro");
     return false;
   }
-  fetch("/usuarios/cadastrar", {
+  fetch("http://localhost:3300/usuarios/cadastrar", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
