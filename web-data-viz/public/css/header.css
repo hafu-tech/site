@@ -59,7 +59,7 @@ header .div-hamburger-pai {
   cursor: pointer;
 }
 
-header .div-hamburger-pai .div-hamburger-filha{
+header .div-hamburger-pai .div-hamburger-filha {
   width: 30px;
   height: 5px;
   background-color: black;
@@ -67,7 +67,6 @@ header .div-hamburger-pai .div-hamburger-filha{
 
 .div-menu-pai {
   display: flex;
-  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -88,7 +87,7 @@ header .div-hamburger-pai .div-hamburger-filha{
 
 .div-menu-pai .div-menu-filha {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: space-evenly;
   align-items: center;
   height: 80%;
