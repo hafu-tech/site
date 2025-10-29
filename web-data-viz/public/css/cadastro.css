@@ -127,7 +127,7 @@
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   
   body {
     display: flex;
@@ -166,7 +166,7 @@
 
   .card-cadastro {
     height: 45%;
-    width: 70vw;
+    width: 80%;
   }
 
   .campo input {

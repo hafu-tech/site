@@ -111,12 +111,29 @@ header .div-hamburger-pai .div-hamburger-filha {
   color: black;
 }
 
-@media screen and (max-width: 600px) {
-  header {
-    display: block;
+@media screen and (max-width: 800px) {
+
+  #canto-direito {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    gap: 20px;
   }
 
-  header input {
-    margin: 10px 0 10px 60px;
+  header #login-cadastro {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding-left: 80px;
   }
+
+  .div-hamburger-pai {
+    display: none;
+  }
+
+  .div-hamburger-filha {
+    display: none;
+  }
+  
 }
