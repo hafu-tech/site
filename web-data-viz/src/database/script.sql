@@ -76,6 +76,6 @@ CREATE TABLE Escola (
     inse_qtd_alunos INT,
     valor_inse DOUBLE,
     inse_classificacao2014 VARCHAR(50),
-	inse_classificaca02015 VARCHAR(50)
+	inse_classificacao2015 VARCHAR(50)
 );
             

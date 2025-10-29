@@ -10,6 +10,10 @@ body {
   background-color: white;
 }
 
+:root {
+  --amarelo: #E9AD32;
+}
+
 img {
   width: 150px;
   height: 150px;
@@ -27,6 +31,7 @@ img {
 }
 
 .dash-right .avisos .container {
+  width: 85vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,16 +49,23 @@ img {
   width: 95%;
 }
 
-.dash-right .avisos .div-form input {
-  width: 95%;
-  border-radius: 5px;
-}
-
 .dash-right .avisos .div-form textarea {
   width: 95%;
-  border: 3px solid #e6005a;
+  height: 150px;
+  border: 3px solid #050835;
   background-color: white;
   border-radius: 5px;
+  margin-top: 15px;
+  resize: none;
+}
+
+.dash-right .avisos .div-form #titulo {
+  width: 95%;
+  height: 30px;
+  border: 3px solid #050835;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 15px;
 }
 
 .dash-right .avisos .div-form button {
@@ -65,7 +77,7 @@ img {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #050835;
   width: 120px;
 }
 
@@ -78,7 +90,7 @@ img {
   font-size: 14px;
   padding: 5px 8px;
   color: white;
-  background-color: #e6005a;
+  background-color: var(--amarelo);
   width: 80px;
 }
 
@@ -89,8 +101,20 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  border-bottom: 3px solid var(--amarelo);
   padding: 20px;
+  color: white;
+}
+
+.publicacao span {
+    color: white;
+}
+
+.span-sem-resultado {
+  display: inline-block;
+  height: 40px;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
 .publicacao>*:not(:last-child) {
@@ -98,11 +122,12 @@ img {
 }
 
 .div-results {
-  width: 100%;
+  width: 70%;
 }
 
 .div-results .feed-container {
-  background-color: #212124;
+  background-color: #050835;
+  margin-top: 10px;
   border-radius: 5px;
   margin-bottom: 80px;
 }
@@ -131,7 +156,7 @@ img {
   width: 100%;
   height: 100vh;
   margin-left: 15vw;
-  background-color: #d19a00;
+  background-color: rgb(228, 227, 227);
 }
 
 .header-left div {
@@ -155,7 +180,7 @@ img {
   justify-content: space-evenly;
   align-items: center;
   border-right: 3px solid #0f0f0f;
-  background-color: #efefef;
+  background-color: #050835;
 }
 
 .dash-right {
@@ -174,7 +199,7 @@ img {
 }
 
 .hello h3 {
-  color: #212124;
+  color: white;
   font-weight: 300;
   font-size: 1.2rem;
 }
@@ -186,7 +211,7 @@ img {
 .btn-nav {
   width: 50%;
   color: #000000;
-  background-color: #e6d300;
+  background-color: var(--amarelo);
   border-radius: 8px;
   border: #212124 solid 2px;
   display: flex;
@@ -241,14 +266,11 @@ img {
 .parte-cima {
   width: 85%;
   height: 10%;
-  background-color: #d19a00;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
 }
 
 .kpis {
-  background-color: #d19a00;
   width: 85%;
   height: 15%;
   display: flex;
@@ -259,7 +281,6 @@ img {
 }
 
 .kpi {
-  background-color: #ffffff;
   width: 55%;
   height: 100%;
   border-radius: 10px;
@@ -273,22 +294,14 @@ img {
   font-family: 'Barlow', sans-serif;
 }
 
-.kpi h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #23191c;
+.kpi1, .kpi1 h3, .kpi1 p, .kpi1 span {
+  background-color: #050835;
+  color: white;
 }
 
-.kpi p {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 5px;
-  color: #ff0000;
-}
-
-.kpi span {
-  font-size: 1.1rem;
-  color: #23191c;
+.kpi2, .kpi2 h3, .kpi2 p, .kpi2 span {
+  background-color: var(--amarelo);
+  color: #050835;
 }
 
 .nome-pagina {
@@ -299,6 +312,8 @@ img {
   justify-content: center;
   border-radius: 8px;
   background-color: white;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .nome-pagina span {
@@ -336,10 +351,6 @@ img {
   cursor: pointer;
   background-color: #fff;
   transition: 0.3s;
-}
-
-.regiao select:hover {
-  background-color: #ca8e8e;
 }
 
 .container {
