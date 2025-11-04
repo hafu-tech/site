@@ -212,6 +212,11 @@
 
                         divButtons.className = "div-buttons"
 
+                        if (sessionStorage.TIPO_USUARIO == "Analista"){
+                            btnDeletar.style.display = "none"
+                            btnEditar.style.display = "none"
+                        }
+
                         btnEditar.className = "publicacao-btn-editar"
                         btnEditar.id = "btnEditar" + publicacao.idComentario;
                         btnEditar.setAttribute("onclick", `editar(${publicacao.idComentario})`);
