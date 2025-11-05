@@ -8,7 +8,6 @@ function cadastrar() {
   var emailVar = email_input.value.trim();
   var senhaVar = senha_input.value;
   var confirmacaoVar = confirmacao_senha_input.value;
-  var tipoVar = tipo_usuario.value;
 
   if (
     nomeVar.length === 0 ||
@@ -55,8 +54,7 @@ function cadastrar() {
 
       nomeServer: nomeVar,
       emailServer: emailVar,
-      senhaServer: senhaVar,
-      tipoServer: tipoVar
+      senhaServer: senhaVar
     }),
   })
 
