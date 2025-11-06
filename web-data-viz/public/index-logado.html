@@ -20,9 +20,8 @@
     <div><a href="index.html"><img src="assets/logo.png" alt=""></a></div>
     <div id="canto-direito">
       <div id="login-cadastro">
-        <a href="cadastro.html">Cadastro</a>
-        <a href="login.html">Login</a>
         <a href="dashboard/dashboard.html">Dashboard</a>
+        <a style="cursor: pointer;" onclick="limparSessao2()">Sair</a>
       </div>
       <div class="div-hamburger-pai" onclick="mostrarMenu()">
         <div class="div-hamburger-filha"></div>
@@ -121,3 +120,9 @@
 </body>
 
 </html>
+<script>
+    function limparSessao2() {
+    sessionStorage.clear();
+    window.location = "index.html";
+}
+</script>
