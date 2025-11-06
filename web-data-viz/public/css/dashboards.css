@@ -6,7 +6,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:"Poppins", sans-serif;
   background-color: white;
 }
 
@@ -28,7 +28,7 @@ img {
   width: 100vw;
   height: 200vh;
   background-color: rgb(247, 244, 244);
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:"Poppins", sans-serif;
 }
 
 .dash-right .avisos .container {
@@ -73,7 +73,7 @@ img {
 
 .dash-right .avisos .div-form button {
   cursor: pointer;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:"Poppins", sans-serif;
   border: 0;
   border-radius: 5px;
   font-weight: 600;
@@ -92,7 +92,7 @@ img {
 
 .publicacao-btn-editar {
   cursor: pointer;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:"Poppins", sans-serif;
   border: 0;
   border-radius: 5px;
   font-weight: 600;
@@ -327,7 +327,7 @@ img {
   text-align: center;
   padding: 15px;
   box-shadow: 4px 0px 5px 0px rgba(0, 0, 0, 0.758);
-  font-family: 'Barlow', sans-serif;
+  font-family:"Poppins", sans-serif'Barlow', sans-serif;
 }
 
 .kpi1,
@@ -376,7 +376,7 @@ img {
   height: 80%;
   background-color: #ffffff;
   border-radius: 8px;
-  font-family: 'Barlow', sans-serif;
+  font-family:"Poppins", sans-serif'Barlow', sans-serif;
   margin-left: 5px;
 }
 
@@ -413,22 +413,14 @@ img {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 70%;
+  width: 60%;
   height: 80%;
   margin-top: 5%;
-  margin-left: 15%;
+  margin-left: 20%;
   border-radius: 8px;
   background-color: white;
   box-shadow: 4px 1px 5px 0 #050835;
-}
 
-.card-edicao::after {
-  position: absolute;
-  width: 1px;
-  content: "";
-  height: 100%;
-  background-color: #000;
-  left: 300px;
 }
 
 .card-edicao .config {
@@ -437,7 +429,8 @@ img {
   justify-content: space-between;
   position: absolute;
   height: 90%;
-  margin-left: 30%;
+  /* margin-left: 30%; */
+  text-align: center;
 }
 
 .card-edicao .div-senha {
@@ -445,7 +438,9 @@ img {
   flex-direction: column;
   justify-content: space-between;
   height: 40%;
-}
+  width: 100%;
+  font-size: larger;
+  }
 
 .card-edicao .div-excluir {
   display: flex;
@@ -456,13 +451,13 @@ img {
 
 .card-edicao input {
   border-radius: 10px;
-  height: 30px;
+  height: 40px;
   width: 350px;
   padding-left: 5px;
 }
 
 .card-edicao button {
-  height: 25px;
+  height: 30px;
   background-color: var(--amarelo);
   color: #f0f0f0;
   border: none;
@@ -470,6 +465,7 @@ img {
   transition: 0.4s;
   cursor: pointer;
   font-weight: bolder;
+  font-size: larger;
 
 }
 
