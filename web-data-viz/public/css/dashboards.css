@@ -26,7 +26,7 @@ img {
 
 .dash-right .avisos {
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
   background-color: rgb(247, 244, 244);
   font-family:"Poppins", sans-serif;
 }
@@ -46,6 +46,10 @@ img {
 
 .dash-right .avisos .container .div-form #form_postagem {
   width: 95%;
+}
+
+.dash-right .avisos .container .div-form #form_postagem label{
+  font-size: 14px;
 }
 
 .dash-right .avisos .div-form label {
@@ -77,7 +81,7 @@ img {
   border: 0;
   border-radius: 5px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 14px;
   padding: 10px 15px;
   color: white;
   background-color: #050835;
@@ -382,7 +386,7 @@ img {
 
 .regiao label {
   color: #000;
-  font-size: 1rem;
+  font-size: 12px;
 }
 
 .regiao select {
@@ -399,6 +403,10 @@ img {
   padding-top: 70px;
   padding-left: 70px;
   color: black;
+}
+
+.container h1 {
+  font-size: 18px;
 }
 
 .div-form {
@@ -420,7 +428,6 @@ img {
   border-radius: 8px;
   background-color: white;
   box-shadow: 4px 1px 5px 0 #050835;
-
 }
 
 .card-edicao .config {
@@ -437,16 +444,15 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 40%;
+  height: 50%;
   width: 100%;
-  font-size: larger;
   }
 
 .card-edicao .div-excluir {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 40%;
+  height: 30%;
 }
 
 .card-edicao input {
@@ -465,8 +471,6 @@ img {
   transition: 0.4s;
   cursor: pointer;
   font-weight: bolder;
-  font-size: larger;
-
 }
 
 .card-edicao button:hover {
