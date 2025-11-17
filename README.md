@@ -1,5 +1,5 @@
 <div align="center">
- ![HafuTech Logo](site/web-data-viz/public/assets/logo.png)
+ <img src="web-data-viz/public/assets/logo.png">
   <h1> HafuTech</h1>
   <h2>Aplicação Web para Monitoramento e Análise de Evasão Escolar</h2>
   <h3>✨ Nossa Educação, Nosso Futuro ✨</h3>
