@@ -1,5 +1,5 @@
 <div align="center">
- <img style="width:35px; height: 35px" src="web-data-viz/public/assets/logo.png"><h1> HafuTech</h1>
+ <img style="width:55px; height: 55px" src="web-data-viz/public/assets/logo.png"><h1> HafuTech</h1>
   
   <h2>Aplicação Web para Monitoramento e Análise de Evasão Escolar</h2>
   <h3>✨ Nossa Educação, Nosso Futuro ✨</h3>
