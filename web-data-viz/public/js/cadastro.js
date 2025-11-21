@@ -4,8 +4,8 @@
 
 function cadastrar() {
   var nomeVar = nome_input.value;
-
   var emailVar = email_input.value.trim();
+  var cnpjVar = cnpj_input.value.trim();
   var senhaVar = senha_input.value;
   var confirmacaoVar = confirmacao_senha_input.value;
 
@@ -13,7 +13,8 @@ function cadastrar() {
     nomeVar.length === 0 ||
     emailVar.length === 0 ||
     senhaVar.length === 0 ||
-    confirmacaoVar.length === 0
+    confirmacaoVar.length === 0 ||
+    cnpjVar.length === 0 
   ) {
     exibirMensagem("Por favor, preencha todos os campos.", "erro");
     return false;
@@ -33,6 +34,11 @@ function cadastrar() {
     !dominio.endsWith(".school")
   ) {
     exibirMensagem("O domínio do e-mail parece inválido.", "erro");
+    return false;
+  }
+
+  if (cnpjVar.length != 14){
+    exibirMensagem("Verifique o CNPJ e tente novamente")
     return false;
   }
 
