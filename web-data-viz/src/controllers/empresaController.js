@@ -1,4 +1,4 @@
-var usuarioModel = require("../models/usuarioModel");
+var empresaModel = require("../models/empresaModel");
 function autenticar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
@@ -9,7 +9,7 @@ function autenticar(req, res) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
 
-        usuarioModel.autenticar(email, senha)
+        empresaModel.autenticar(email, senha)
             .then(
                 function (resultadoAutenticar) {
                     console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
@@ -43,6 +43,7 @@ function cadastrar(req, res) {
     
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
+    var cnpj = req.body.cnpjServer;
     var senha = req.body.senhaServer;
     console.log("passei aqui 2")
 
@@ -55,7 +56,7 @@ function cadastrar(req, res) {
         res.status(400).send("Sua senha está undefined!");
     } else{
 
-        usuarioModel.cadastrar(nome, email, senha)
+        empresaModel.cadastrar(nome, email, senha, cnpj)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -75,9 +76,9 @@ function cadastrar(req, res) {
 
 function editar(req, res) {
     var novaSenha = req.body.novaSenha;
-    var idUsuario = req.params.idUsuario;
+    var idEmpresa = req.params.idEmpresa;
 
-    usuarioModel.editar(novaSenha, idUsuario)
+    empresaModel.editar(novaSenha, idEmpresa)
         .then(
             function (resultado) {
                 res.json(resultado);
@@ -94,9 +95,9 @@ function editar(req, res) {
 }
 
 function deletar(req, res) {
-    var idUsuario = req.params.idUsuario;
+    var idEmpresa = req.params.idEmpresa;
 
-    usuarioModel.deletar(idUsuario)
+    empresaModel.deletar(idEmpresa)
         .then(
             function (resultado) {
                 res.json(resultado);
